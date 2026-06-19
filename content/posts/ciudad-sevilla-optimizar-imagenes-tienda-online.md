@@ -12,6 +12,8 @@ thumbnail: "/images/blog/sevilla-optimizar-imagenes-tienda-online.jpg"
 
 ## Introducción
 
+
+![Optimizar imágenes para tiendas online](/images/blog/sevilla-optimizar-imagenes-tienda-online.jpg)
 Sevilla tiene una de las tradiciones comerciales más fuertes de España. Si tienes una tienda online —ya sea un comercio de **artesanía andaluza** en **Triana**, una tienda de moda con raíces en **Santa Cruz**, o un emprendimiento que vende productos de **Semana Santa** y **Feria de Abril** por internet— sabrás que las fotos son fundamentales para transmitir la calidad y la identidad de tus productos. Pero las fotos de alta calidad pesan mucho: una foto de un traje de flamenca o de una pieza de cerámica de alta resolución puede pesar 4-5 MB. Si tienes 20 productos en una página, eso son 80-100 MB. Google penaliza las webs lentas, y en el mercado online andaluz, la velocidad de carga puede ser la diferencia entre una venta y un carrito abandonado. En este artículo te explicamos cómo optimizar las imágenes de tu tienda online desde el navegador, con <a href="https://comprimefotos.com">comprimefotos.com</a>.
 
 ## Por qué la optimización de imágenes importa para tu tienda en Sevilla

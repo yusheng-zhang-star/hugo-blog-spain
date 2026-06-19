@@ -12,6 +12,8 @@ thumbnail: "/images/blog/valencia-optimizar-imagenes-tienda-online.jpg"
 
 ## Introducción
 
+
+![Optimizar imágenes para tiendas online](/images/blog/valencia-optimizar-imagenes-tienda-online.jpg)
 Valencia es una ciudad con un ecosistema emprendedor en crecimiento. Si tienes una tienda online —ya sea una marca de **cerámica artesanal** en **Ciutat Vella**, una tienda de productos de **huerta** que vende por **WooCommerce**, o una academia de formación online que necesita subir PDFs y fotos— sabrás que la velocidad de carga de tu web es clave. Las imágenes de alta calidad son esenciales para mostrar la calidad de tus productos valencianos, pero si pesan demasiado, tu web cargará lento y perderás clientes. En este artículo te explicamos cómo optimizar las imágenes de tu tienda online desde el navegador, con <a href="https://comprimefotos.com">comprimefotos.com</a>.
 
 ## Por qué la optimización de imágenes importa para tu tienda en Valencia

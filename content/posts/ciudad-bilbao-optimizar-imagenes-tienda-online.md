@@ -12,6 +12,8 @@ thumbnail: "/images/blog/bilbao-optimizar-imagenes-tienda-online.jpg"
 
 ## Introducción
 
+
+![Optimizar imágenes para tiendas online](/images/blog/bilbao-optimizar-imagenes-tienda-online.jpg)
 Bilbao es el centro económico y industrial del **País Vasco**. Si tienes una tienda online —ya sea una empresa de **productos industriales** en **Abando**, una tienda de **diseño vasco** que vende por **Shopify**, o una empresa de **tecnología** que necesita subir catálogos con fotos de productos— sabrás que la velocidad de carga de tu web es decisiva. Las fotos de productos industriales y tecnológicos de alta calidad suelen pesar mucho: una foto de un componente electrónico detallado puede pesar 4-5 MB. Si tienes 50 productos en una página de catálogo, eso son 200 MB que el cliente tiene que descargar. En este artículo te explicamos cómo optimizar las imágenes de tu tienda online desde el navegador, sin instalar nada, con <a href="https://comprimefotos.com">comprimefotos.com</a>.
 
 ## Por qué la optimización de imágenes importa para tu tienda en Bilbao

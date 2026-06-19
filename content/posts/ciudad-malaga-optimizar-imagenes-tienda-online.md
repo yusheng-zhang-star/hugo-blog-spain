@@ -12,6 +12,8 @@ thumbnail: "/images/blog/malaga-optimizar-imagenes-tienda-online.jpg"
 
 ## Introducción
 
+
+![Optimizar imágenes para tiendas online](/images/blog/malaga-optimizar-imagenes-tienda-online.jpg)
 Málaga es la puerta del **Costa del Sol** y una de las ciudades con más dinamismo comercial del sur de España. Si tienes una tienda online —ya sea un comercio de **productos de turismo** en el **Centro**, una tienda de **artesanía de la costa** que vende por **Shopify**, o un emprendimiento que vende productos a turistas internacionales— sabrás que las fotos de tus productos son lo que convence al cliente de comprar. Pero las fotos de productos de alta calidad suelen pesar mucho: una foto de un producto de cerámica o de un producto turístico de alta resolución puede pesar 4-5 MB. Si tienes 30 productos en una página de catálogo, eso son 120-150 MB. Google penaliza las webs lentas, y en el competitivo mercado de Málaga, cada segundo de retraso en la carga puede significar perder una venta. En este artículo te explicamos cómo optimizar las imágenes de tu tienda online desde el navegador, sin instalar nada, con <a href="https://comprimefotos.com">comprimefotos.com</a>.
 
 ## Por qué la optimización de imágenes importa para tu tienda en Málaga
