@@ -1,0 +1,26 @@
+{{/*
+  cover.html — overrides PaperMod's cover image rendering.
+  Supports both `cover` and `thumbnail` frontmatter fields.
+  Renders a responsive cover image above the post entry content.
+*/}}
+
+{{ $page := .cxt }}
+{{ $src := "" }}
+
+{{/* pick image source: cover > thumbnail > fallback */}}
+{{ if $page.Params.cover }}
+  {{ $src = $page.Params.cover }}
+{{ else if $page.Params.thumbnail }}
+  {{ $src = $page.Params.thumbnail }}
+{{ end }}
+
+{{ if and $src (not .isHidden) }}
+<div class="cover-img-wrapper">
+  <img
+    src="{{ $src | relURL }}"
+    alt="{{ $page.Title | plainify }}"
+    class="cover-img"
+    loading="lazy"
+  >
+</div>
+{{ end }}
