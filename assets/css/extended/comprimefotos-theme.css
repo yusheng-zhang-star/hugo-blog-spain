@@ -815,6 +815,11 @@ h1, h2, h3, h4 {
   color: var(--cf-text-body);
 }
 
+/* Hide duplicate H1: frontmatter title already shown by template */
+.single .post-content > h1:first-child {
+  display: none !important;
+}
+
 .single .post-content p,
 .single .post-content li,
 .single .post-content ol,
