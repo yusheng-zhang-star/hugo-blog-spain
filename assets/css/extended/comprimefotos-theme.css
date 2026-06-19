@@ -1073,6 +1073,24 @@ h1, h2, h3, h4 {
   color: #fff !important;
 }
 
+/* --- Tags CTA Button — override btn-primary (higher specificity) --- */
+.ciud-cta-banner .tags-cta-btn {
+  background: #fff !important;
+  color: #1a7aa3 !important;
+  font-weight: 800 !important;
+  border: none !important;
+  padding: 0.8rem 2rem !important;
+  font-size: 0.95rem !important;
+  border-radius: 50px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+}
+.ciud-cta-banner .tags-cta-btn:hover {
+  background: #f0f9ff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 122, 163, 0.25) !important;
+  color: #1a7aa3 !important;
+}
+
 /* ============================================
    Responsive v4
    ============================================ */
