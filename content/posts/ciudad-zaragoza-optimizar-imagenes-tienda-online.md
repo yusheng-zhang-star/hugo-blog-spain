@@ -12,8 +12,6 @@ thumbnail: "/images/blog/zaragoza-optimizar-imagenes-tienda-online.jpg"
 
 ## Introducción
 
-
-![Optimizar imágenes para tiendas online](/images/blog/zaragoza-optimizar-imagenes-tienda-online.jpg)
 Zaragoza es un centro logístico y comercial clave en el norte de España. Si tienes una tienda online —ya sea un comercio de **productos industriales** en el **Actur**, una tienda de **alimentación aragonesa** que vende por **WooCommerce**, o una empresa de **logística** que necesita subir catálogos con fotos de productos— sabrás que la velocidad de carga de tu web es decisiva. Las fotos de productos industriales de alta calidad suelen pesar mucho: una foto de un componente mecánico detallado puede pesar 4-5 MB. Si tienes 50 productos en una página de catálogo, eso son 200 MB que el cliente tiene que descargar. En este artículo te explicamos cómo optimizar las imágenes de tu tienda online desde el navegador, sin instalar nada, con <a href="https://comprimefotos.com">comprimefotos.com</a>.
 
 ## Por qué la optimización de imágenes importa para tu tienda en Zaragoza

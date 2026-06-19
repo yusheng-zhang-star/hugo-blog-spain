@@ -12,8 +12,6 @@ thumbnail: "/images/blog/barcelona-optimizar-imagenes-tienda-online.jpg"
 
 ## Introducción
 
-
-![Optimizar imágenes para tiendas online](/images/blog/barcelona-optimizar-imagenes-tienda-online.jpg)
 Barcelona es una de las ciudades con más emprendimientos de **moda y diseño** de España. Si tienes una tienda online de ropa, joyas o accesorios —ya sea un pequeño brand en **Gràcia**, una tienda de moda sostenible en **Eixample** o una marca que vende por **Shopify**— sabrás que las fotos de tus productos son lo que convence al cliente de comprar. Pero las fotos de moda de alta calidad suelen pesar mucho: una foto de un vestido de alta resolución puede pesar 5 MB, y si tienes 30 productos en una página de catálogo, eso son 150 MB. Google penaliza las webs lentas, y en el competitivo mercado de Barcelona, cada segundo de retraso en la carga puede significar perder una venta. En este artículo te explicamos cómo optimizar las imágenes de tu tienda online desde el navegador, sin instalar nada, con <a href="https://comprimefotos.com">comprimefotos.com</a>.
 
 ## Por qué la optimización de imágenes importa para tu tienda en Barcelona

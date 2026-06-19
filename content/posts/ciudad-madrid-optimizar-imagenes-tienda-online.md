@@ -12,8 +12,6 @@ thumbnail: "/images/blog/madrid-optimizar-imagenes-tienda-online.jpg"
 
 ## Introducción
 
-
-![Optimizar imágenes para tiendas online](/images/blog/madrid-optimizar-imagenes-tienda-online.jpg)
 Si tienes una tienda online en **Madrid** —ya sea un pequeño negocio en la calle **Salamanca**, un emprendimiento de moda en **Malasaña** o una tienda de artesanía que vende por **Shopify** o **WooCommerce**— sabrás que la velocidad de carga de tu web es decisiva. Google premia a las tiendas rápidas con mejores posiciones en el buscador, y penaliza las lentas con un **bounce rate** más alto. El principal culpable de una web lenta suele ser las imágenes: una foto de producto de alta calidad puede pesar 3 MB o más, y si tienes 20 productos en una página, eso son 60 MB que el cliente tiene que descargar. En este artículo te explicamos cómo optimizar las imágenes de tu tienda online desde el navegador, sin instalar nada, con <a href="https://comprimefotos.com">comprimefotos.com</a>.
 
 ## Por qué la optimización de imágenes importa para tu tienda en Madrid
