@@ -4,6 +4,10 @@ date: 2026-06-19T13:00:00+08:00
 draft: false
 ciudades: ["madrid"]
 tags: ["comprimir fotos", "Instagram Madrid", "marketing local"]
+categories: ["Guías"]
+thumbnail: "/images/blog/madrid-instagram-compresion.jpg"
+description: "Aprende a comprimir fotos para Instagram en Madrid sin perder calidad. Guía completa 2026 con tamaños recomendados, herramientas gratuitas y consejos de marketing local."
+keywords: "comprimir fotos Instagram Madrid, reducir tamaño fotos Madrid, optimizar imágenes Instagram, ComprimeFotos Madrid"
 canonical: "https://comprimefotos.com/es/ciudades/madrid/"
 ---
 
