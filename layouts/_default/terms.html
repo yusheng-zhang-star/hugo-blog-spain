@@ -1,7 +1,12 @@
-{{/* Custom terms page for /ciudades/ — v5 full redesign */}}
+{{/* Custom terms page — v6: auto-detects ciudades vs tags taxonomy */}}
 {{ define "main" }}
 
-{{/* ===== Header Section — enhanced branding ===== */}}
+{{- $isCiudades := eq .Type "ciudades" }}
+{{- $isTags := eq .Type "tags" }}
+
+{{/* ===== CIUDADES PAGE ===== */}}
+{{ if $isCiudades }}
+
 <header class="page-header ciud-page-header">
   <h1 class="ciud-title">{{ .Title }}</h1>
   <p class="ciud-subtitle">
@@ -11,14 +16,12 @@
   <p class="ciud-cta-hint">Elige tu ciudad para ver trucos exclusivos para negocios locales</p>
 </header>
 
-{{/* ===== City Grid with Cover Images ===== */}}
 <div class="terms-grid">
   {{- $type := .Type }}
   {{- range $key, $value := .Data.Terms.Alphabetical }}
   {{- $name := .Name }}
   {{- $count := .Count }}
   {{- with site.GetPage (printf "/%s/%s" $type $name) }}
-
   <a href="{{ .Permalink }}" class="term-card">
     <div class="term-card-cover">
       <img src="{{ printf "/images/blog/%s.jpg" (lower $name) | relURL }}"
@@ -34,12 +37,10 @@
       <span class="term-card-arrow">→</span>
     </div>
   </a>
-
   {{- end }}
   {{- end }}
 </div>
 
-{{/* ===== Bottom CTA Banner ===== */}}
 <div class="ciud-cta-banner">
   <div class="ciud-cta-inner">
     <div class="ciud-cta-text">
@@ -54,5 +55,49 @@
     </a>
   </div>
 </div>
+
+{{/* ===== TAGS PAGE ===== */}}
+{{ else if $isTags }}
+
+<header class="page-header tags-page-header">
+  <h1 class="tag-page-title">{{ .Title }}</h1>
+  <p class="tag-subtitle">
+    Explora todas nuestras guías por temática.
+    Haz clic en una etiqueta para ver artículos relacionados sobre compresión de imágenes.
+  </p>
+  <p class="tag-hint">Temáticas populares: compresión WhatsApp, Instagram, envío por móvil y más.</p>
+</header>
+
+<div class="tags-grid">
+  {{- $type := .Type }}
+  {{- range $key, $value := .Data.Terms.Alphabetical }}
+  {{- $name := .Name }}
+  {{- $count := .Count }}
+  {{- with site.GetPage (printf "/%s/%s" $type $name) }}
+  <a href="{{ .Permalink }}" class="tag-card"
+     data-count="{{ $count }}">
+    <span class="tag-card-name">{{ .LinkTitle }}</span>
+    <span class="tag-card-count">{{ $count }} artículo{{ if ne $count 1 }}s{{ end }}</span>
+  </a>
+  {{- end }}
+  {{- end }}
+</div>
+
+<div class="ciud-cta-banner">
+  <div class="ciud-cta-inner">
+    <div class="ciud-cta-text">
+      <strong>¿Necesitas comprimir tus fotos?</strong>
+      <span>Prueba nuestra herramienta gratuita sin registro ni límites.</span>
+    </div>
+    <a href="https://comprimefotos.com/?utm_source=blog&utm_medium=tags&utm_campaign=cta_bottom"
+       class="btn-primary ciud-cta-btn"
+       target="_blank"
+       rel="noopener">
+      Ir a ComprimeFotos.com
+    </a>
+  </div>
+</div>
+
+{{ end }}
 
 {{ end }}
