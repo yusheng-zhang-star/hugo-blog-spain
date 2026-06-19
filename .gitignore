@@ -1,0 +1,17 @@
+# Hugo output directory
+public/
+
+# Hugo build lock
+.hugo_build.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
