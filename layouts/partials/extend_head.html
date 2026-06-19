@@ -6,12 +6,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
 
-<!-- Inline style: force readable body text color (overrides ALL external CSS) -->
+<!-- Override PaperMod's pale text: --secondary controls p{} color -->
 <style>
-  body, .post-single-content, .single .post-content,
-  .single .post-content p, .single .post-content li,
-  .single .post-content ol, .single .post-content ul,
-  .entry-content p, .entry-content li {
+  :root {
+    --secondary: #1a1a1a;
+    --content: #1a1a1a;
+  }
+  p, li, ol, ul, body,
+  .post-content, .post-single-content, .entry-content {
     color: #1a1a1a !important;
   }
 </style>
