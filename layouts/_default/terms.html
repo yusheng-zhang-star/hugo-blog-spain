@@ -1,33 +1,58 @@
-{{/* Custom terms page template for ComprimeFotos Blog */}}
+{{/* Custom terms page for /ciudades/ — v5 full redesign */}}
 {{ define "main" }}
 
-<header class="page-header">
-  <h1>{{ .Title }}</h1>
-  {{- if .Description }}
-  <div class="post-description">{{ .Description | markdownify }}</div>
-  {{- end }}
-  {{- if not .Description }}
-  <div class="post-description">
-    <p>Explora nuestras guías de compresión de imágenes por ciudad. Haz clic en una ciudad para ver todas las guías disponibles.</p>
-  </div>
-  {{- end }}
+{{/* ===== Header Section — enhanced branding ===== */}}
+<header class="page-header ciud-page-header">
+  <h1 class="ciud-title">{{ .Title }}</h1>
+  <p class="ciud-subtitle">
+    Explora nuestras guías de compresión de imágenes por ciudad.
+    Haz clic en una ciudad para ver todas las guías disponibles.
+  </p>
+  <p class="ciud-cta-hint">Elige tu ciudad para ver trucos exclusivos para negocios locales</p>
 </header>
 
-{{/* City grid */}}
-<ul class="terms-grid">
+{{/* ===== City Grid with Cover Images ===== */}}
+<div class="terms-grid">
   {{- $type := .Type }}
   {{- range $key, $value := .Data.Terms.Alphabetical }}
   {{- $name := .Name }}
   {{- $count := .Count }}
   {{- with site.GetPage (printf "/%s/%s" $type $name) }}
-  <li class="term-card">
-    <a href="{{ .Permalink }}" class="term-card-link">
+
+  <a href="{{ .Permalink }}" class="term-card">
+    <div class="term-card-cover">
+      <img src="{{ printf "/images/blog/%s.jpg" (lower $name) | relURL }}"
+           alt="{{ .LinkTitle }}"
+           class="term-card-img"
+           loading="lazy"
+           onerror="this.style.display='none'">
+      <div class="term-card-overlay"></div>
+      <span class="term-card-badge">{{ $count }} guía{{ if ne $count 1 }}s{{ end }}</span>
+    </div>
+    <div class="term-card-body">
       <span class="term-card-name">{{ .LinkTitle }}</span>
-      <span class="term-card-count">{{ $count }} guía{{ if ne $count 1 }}s{{ end }}</span>
+      <span class="term-card-arrow">→</span>
+    </div>
+  </a>
+
+  {{- end }}
+  {{- end }}
+</div>
+
+{{/* ===== Bottom CTA Banner ===== */}}
+<div class="ciud-cta-banner">
+  <div class="ciud-cta-inner">
+    <div class="ciud-cta-text">
+      <strong>¿Necesitas comprimir fotos ahora?</strong>
+      <span>Usa nuestra herramienta gratuita — sin registro, sin límites.</span>
+    </div>
+    <a href="https://comprimefotos.com/?utm_source=blog&utm_medium=ciudades&utm_campaign=cta_bottom"
+       class="btn-primary ciud-cta-btn"
+       target="_blank"
+       rel="noopener">
+      Comprimir fotos gratis
     </a>
-  </li>
-  {{- end }}
-  {{- end }}
-</ul>
+  </div>
+</div>
 
 {{ end }}
