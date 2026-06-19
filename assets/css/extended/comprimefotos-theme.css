@@ -127,32 +127,36 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
-/* City quick links in hero */
+/* City quick links in hero — v4: spacious, mobile-friendly */
 .hero-cities {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 0.75rem 1rem;
   position: relative;
+  margin-top: 1.2rem;
 }
 
 .hero-cities a {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  padding: 0.45rem 1rem;
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-radius: 22px;
+  padding: 0.55rem 1.15rem;
   color: #fff !important;
-  font-size: 0.88rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .hero-cities a:hover {
-  background: rgba(255, 255, 255, 0.32);
-  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   color: #fff !important;
 }
 
@@ -178,17 +182,30 @@ h1, h2, h3, h4 {
   line-height: 1.7 !important;
 }
 
-/* --- Post Cards --- */
+/* --- Post Cards v4: richer visual hierarchy --- */
 .post-entry {
   background: #fff;
   border: 1px solid var(--cf-card-border);
-  border-radius: var(--cf-radius);
-  padding: 1.8rem 2rem;
-  margin-bottom: 1.2rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  border-radius: 14px;
+  padding: 0; /* 封面图贴边，内容区有内边距 */
+  margin-bottom: 1.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 2px 10px rgba(37, 150, 190, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
   position: relative;
   overflow: hidden;
+}
+
+/* Card inner content area (when cover image exists) */
+.post-entry .entry-header,
+.post-entry .entry-content,
+.post-entry .entry-footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Fallback for cards without cover image */
+.post-entry:not(:has(.cover-img-wrapper)) {
+  padding: 1.8rem 2rem;
 }
 
 .post-entry::before {
@@ -198,14 +215,14 @@ h1, h2, h3, h4 {
   left: 0;
   width: 4px;
   height: 100%;
-  background: var(--cf-primary);
+  background: linear-gradient(to bottom, var(--cf-primary), var(--cf-accent));
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.25s ease;
 }
 
 .post-entry:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(37, 150, 190, 0.10);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(37, 150, 190, 0.14), 0 4px 12px rgba(0, 0, 0, 0.06);
   border-color: var(--cf-primary);
 }
 
@@ -214,15 +231,20 @@ h1, h2, h3, h4 {
 [data-scheme="dark"] .post-entry {
   background: #1e293b;
   border-color: #334155;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-[data-scheme="dark"] .post-entry:hover { border-color: var(--cf-primary); }
+[data-scheme="dark"] .post-entry:hover {
+  border-color: var(--cf-primary);
+  box-shadow: 0 12px 28px rgba(37, 150, 190, 0.12), 0 4px 12px rgba(0, 0, 0, 0.25);
+}
 
 .post-entry .entry-header h2 {
   font-size: 1.25rem !important;
   font-weight: 700 !important;
   line-height: 1.4 !important;
   margin-bottom: 0.5rem !important;
+  padding-top: 0.3rem;
 }
 
 .post-entry .entry-header h2 a {
@@ -237,6 +259,7 @@ h1, h2, h3, h4 {
   font-size: 0.95rem;
   line-height: 1.7;
   margin-top: 0.4rem;
+  padding-bottom: 0.3rem;
 }
 
 [data-scheme="dark"] .post-entry .entry-content p { color: #94a3b8; }
@@ -247,9 +270,10 @@ h1, h2, h3, h4 {
 .first-entry {
   background: linear-gradient(135deg, #f0f9ff 0%, #fff 100%);
   border-left: 4px solid var(--cf-primary);
-  border-radius: var(--cf-radius);
+  border-radius: 14px;
   padding: 2rem;
   margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(37, 150, 190, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 [data-scheme="dark"] .first-entry {
@@ -522,25 +546,25 @@ h1, h2, h3, h4 {
 [data-scheme="dark"] .footer-sep { color: #475569; }
 [data-scheme="dark"] .footer-copy { color: #64748b; }
 
-/* --- Cover Image (thumbnail) on post cards --- */
+/* --- Cover Image (thumbnail) on post cards v4 --- */
 .cover-img-wrapper {
-  margin: -1.8rem -2rem 1.2rem -2rem;
-  border-radius: var(--cf-radius) var(--cf-radius) 0 0;
+  margin: 0;
+  border-radius: 14px 14px 0 0;
   overflow: hidden;
-  max-height: 220px;
+  max-height: 240px;
   background: #f0f9ff;
 }
 
 .cover-img {
   width: 100%;
-  height: 220px;
+  height: 240px;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.35s ease;
 }
 
 .post-entry:hover .cover-img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 [data-scheme="dark"] .cover-img-wrapper { background: #1a2a3a; }
@@ -667,23 +691,47 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================
-   Responsive
+   Responsive v4
    ============================================ */
 @media (max-width: 768px) {
   .home-hero {
     padding: 2rem 1.5rem !important;
-    border-radius: 10px;
+    border-radius: 12px;
   }
-  .home-hero h1 { font-size: 1.5rem !important; }
-  .home-hero p { font-size: 1rem !important; }
+  .home-hero h1 { font-size: 1.4rem !important; }
+  .home-hero p { font-size: 0.95rem !important; max-width: 100% !important; }
+
+  /* City buttons: mobile-friendly spacing */
+  .hero-cities {
+    gap: 0.6rem 0.75rem;
+    margin-top: 1rem;
+  }
+  .hero-cities a {
+    font-size: 0.84rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 18px;
+  }
+
+  /* Cards on mobile */
   .post-entry {
-    padding: 1.3rem 1.4rem;
-    border-radius: 10px;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
   }
-  .post-entry .entry-header h2 { font-size: 1.1rem; }
+  .post-entry .entry-header,
+  .post-entry .entry-content,
+  .post-entry .entry-footer {
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+  }
+  .post-entry:not(:has(.cover-img-wrapper)) {
+    padding: 1.3rem 1.3rem;
+  }
+  .cover-img { height: 200px; }
+  .cover-img-wrapper { border-radius: 12px 12px 0 0; max-height: 200px; }
+
+  .post-entry .entry-header h2 { font-size: 1.08rem; }
   .page-header h1 { font-size: 1.5rem; }
-  .hero-cities { gap: 0.4rem; }
-  .hero-cities a { font-size: 0.82rem; padding: 0.4rem 0.8rem; }
+
   .terms-grid {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 0.8rem;
@@ -691,7 +739,11 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 480px) {
-  .home-hero h1 { font-size: 1.3rem !important; }
+  .home-hero h1 { font-size: 1.25rem !important; }
   .home-hero { padding: 1.5rem 1.2rem !important; }
   .single .post-content { font-size: 1rem; }
+  .hero-cities a {
+    font-size: 0.8rem;
+    padding: 0.38rem 0.8rem;
+  }
 }
