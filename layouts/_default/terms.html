@@ -1,0 +1,33 @@
+{{/* Custom terms page template for ComprimeFotos Blog */}}
+{{ define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">{{ .Description | markdownify }}</div>
+  {{- end }}
+  {{- if not .Description }}
+  <div class="post-description">
+    <p>Explora nuestras guías de compresión de imágenes por ciudad. Haz clic en una ciudad para ver todas las guías disponibles.</p>
+  </div>
+  {{- end }}
+</header>
+
+{{/* City grid */}}
+<ul class="terms-grid">
+  {{- $type := .Type }}
+  {{- range $key, $value := .Data.Terms.Alphabetical }}
+  {{- $name := .Name }}
+  {{- $count := .Count }}
+  {{- with site.GetPage (printf "/%s/%s" $type $name) }}
+  <li class="term-card">
+    <a href="{{ .Permalink }}" class="term-card-link">
+      <span class="term-card-name">{{ .LinkTitle }}</span>
+      <span class="term-card-count">{{ $count }} guía{{ if ne $count 1 }}s{{ end }}</span>
+    </a>
+  </li>
+  {{- end }}
+  {{- end }}
+</ul>
+
+{{ end }}

@@ -1,51 +1,75 @@
 /* ============================================
-   ComprimeFotos Blog — Custom Styles
-   Brand-consistent theme extensions for PaperMod
+   ComprimeFotos Blog — Custom Styles v2
+   Optimized for Spanish-speaking audiences
+   Google Fonts loaded via extend_head.html partial
    ============================================ */
 
 /* --- CSS Variables (Brand Palette) --- */
 :root {
-  --cf-primary: #e85d04;       /* Brand orange */
-  --cf-primary-dark: #dc2f02;  /* Deep orange for hover */
-  --cf-primary-light: #ffba08; /* Light accent */
-  --cf-bg-warm: #fffafo;       /* Warm white background */
-  --cf-card-border: #f4d3bc;   /* Subtle warm border */
-  --cf-tag-bg: #fef0da;        /* Tag background */
+  --cf-primary: #e85d04;
+  --cf-primary-dark: #dc2f02;
+  --cf-primary-light: #ffba08;
+  --cf-bg-warm: #fffaf5;
+  --cf-card-border: #f4d3bc;
+  --cf-tag-bg: #fef0da;
   --cf-text-dark: #1a1a2e;
+  --cf-text-body: #3d3d3d;
   --cf-shadow: 0 2px 12px rgba(232, 93, 4, 0.08);
   --cf-radius: 10px;
+  --cf-font: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* Dark mode adjustments */
+/* Dark mode */
 [data-scheme="dark"] {
+  --cf-bg-warm: #111111;
   --cf-card-border: #3d2b1f;
   --cf-tag-bg: #2d1f14;
-  --cf-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --cf-text-dark: #f0e6dd;
+  --cf-text-body: #c0b0a0;
+  --cf-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* --- Body & Background --- */
+/* --- Global Typography (Spanish-optimized) --- */
+html {
+  font-size: 16px;
+}
+
 body {
-  background: var(--cf-bg-warm);
+  font-family: var(--cf-font) !important;
+  background: var(--cf-bg-warm) !important;
+  color: var(--cf-text-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
-[data-scheme="dark"] body {
-  background: #181818;
+/* Spanish text tends to be 20-30% longer than English — generous line height */
+p, li, .entry-content {
+  line-height: 1.75;
 }
 
-/* --- Top Navbar / Header --- */
-.top-bar, nav {
+h1, h2, h3, h4 {
+  font-family: var(--cf-font) !important;
+  color: var(--cf-text-dark);
+  line-height: 1.3;
+}
+
+/* --- Top Navbar --- */
+.top-bar {
   border-bottom: 2px solid var(--cf-primary) !important;
+  box-shadow: 0 1px 8px rgba(232, 93, 4, 0.1);
 }
 
 .logo a, .logo span {
   color: var(--cf-primary) !important;
-  font-weight: 700 !important;
+  font-weight: 800 !important;
+  font-size: 1.25rem !important;
+  letter-spacing: -0.02em;
 }
 
-/* Nav links */
 #menu a span {
-  color: #444;
+  color: var(--cf-text-body);
   font-weight: 500;
+  font-size: 0.95rem;
   transition: color 0.2s;
 }
 
@@ -54,21 +78,90 @@ body {
   color: var(--cf-primary) !important;
 }
 
-/* --- Home Info Section (Intro Banner) --- */
+/* --- Hero Section on Homepage --- */
+.home-hero {
+  background: linear-gradient(135deg, #e85d04 0%, #dc2f02 50%, #9b2226 100%);
+  border-radius: 14px;
+  padding: 3rem 2.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(232, 93, 4, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+}
+
+.home-hero h1 {
+  color: #fff !important;
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 0.8rem !important;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+
+.home-hero p {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-size: 1.1rem !important;
+  max-width: 640px;
+  margin: 0 auto 1.5rem auto !important;
+  line-height: 1.7 !important;
+  position: relative;
+}
+
+/* City quick links in hero */
+.hero-cities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  position: relative;
+}
+
+.hero-cities a {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 0.45rem 1rem;
+  color: #fff !important;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.hero-cities a:hover {
+  background: rgba(255, 255, 255, 0.32);
+  transform: translateY(-1px);
+  color: #fff !important;
+}
+
+/* --- home-info override (PaperMod's default home block) --- */
 .home-info {
   background: linear-gradient(135deg, var(--cf-primary) 0%, var(--cf-primary-dark) 100%) !important;
   border-radius: var(--cf-radius) !important;
   padding: 2.5rem !important;
   margin-bottom: 2rem !important;
-  box-shadow: var(--cf-shadow) !important;
+  box-shadow: 0 4px 20px rgba(232, 93, 4, 0.15) !important;
   border: none !important;
 }
 
 .home-info .entry-header h1 {
   color: #fff !important;
-  font-size: 1.8rem !important;
+  font-size: 1.7rem !important;
   font-weight: 800 !important;
-  margin-bottom: 0.8rem !important;
 }
 
 .home-info .entry-content p {
@@ -77,29 +170,43 @@ body {
   line-height: 1.7 !important;
 }
 
-.home-info .entry-footer {
-  display: none; /* Hide empty social icons area */
-}
-
-/* --- Post Cards (Article List) --- */
+/* --- Post Cards --- */
 .post-entry {
   background: #fff;
-  border: 1px solid var(--cf-card-border);
-  border-radius: var(--cf-radius);
-  padding: 1.6rem 1.8rem;
+  border: 1px solid #f0e6dc;
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
   margin-bottom: 1.2rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.post-entry::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--cf-primary);
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .post-entry:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--cf-shadow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(232, 93, 4, 0.1);
   border-color: var(--cf-primary);
 }
 
+.post-entry:hover::before {
+  opacity: 1;
+}
+
 [data-scheme="dark"] .post-entry {
-  background: #1e1e1e;
+  background: #1a1a1a;
   border-color: #333;
 }
 
@@ -107,55 +214,57 @@ body {
   border-color: var(--cf-primary);
 }
 
-/* First entry (featured post on homepage) */
-.first-entry:not(.home-info) {
-  background: linear-gradient(135deg, #fff 0%, var(--cf-bg-warm) 100%);
-  border-left: 4px solid var(--cf-primary);
-  padding: 2rem 2rem;
-}
-
-[data-scheme="dark"] .first-entry:not(.home-info) {
-  background: linear-gradient(135deg, #222 0%, #1a1a1a 100%);
-}
-
-/* Post titles */
+/* Post entry title */
 .post-entry .entry-header h2 {
-  color: var(--cf-text-dark);
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 0.6rem;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .post-entry .entry-header h2 a {
-  color: inherit;
+  color: var(--cf-text-dark) !important;
+  text-decoration: none;
 }
 
 .post-entry .entry-header h2 a:hover {
-  color: var(--cf-primary);
+  color: var(--cf-primary) !important;
 }
 
-/* Post summary/excerpt text */
-.entry-content p {
-  color: #555;
+/* Post excerpt (if available) */
+.post-entry .entry-content p {
+  color: #666;
   font-size: 0.95rem;
-  line-height: 1.65;
+  line-height: 1.7;
+  margin-top: 0.4rem;
 }
 
-/* Post meta footer (date, read time, author) */
+[data-scheme="dark"] .post-entry .entry-content p {
+  color: #aaa;
+}
+
+/* Post meta */
 .entry-footer span {
   color: #999;
   font-size: 0.85rem;
 }
 
-.entry-footer span:first-child::before {
-  content: "📅 ";
-  font-style: normal;
+/* --- First entry (featured) --- */
+.first-entry {
+  background: linear-gradient(135deg, #fff9f0 0%, #fff 100%);
+  border-left: 4px solid var(--cf-primary);
+  border-radius: 12px;
+  padding: 2rem 2rem;
+  margin-bottom: 1.5rem;
 }
 
-/* --- Tags Page Styling --- */
-.term-list .term-entry a,
-.tags-list a {
+[data-scheme="dark"] .first-entry {
+  background: linear-gradient(135deg, #1e1a14 0%, #1a1a1a 100%);
+}
+
+/* --- Tags styling --- */
+.tags-list a,
+.term-list .term-entry a {
   background: var(--cf-tag-bg) !important;
   border: 1px solid var(--cf-card-border) !important;
   border-radius: 20px !important;
@@ -163,7 +272,10 @@ body {
   color: #555 !important;
   font-weight: 500 !important;
   font-size: 0.9rem !important;
+  text-decoration: none;
   transition: all 0.2s ease !important;
+  display: inline-block;
+  margin: 0.3rem 0.2rem;
 }
 
 .tags-list a:hover,
@@ -171,55 +283,135 @@ body {
   background: var(--cf-primary) !important;
   color: #fff !important;
   border-color: var(--cf-primary) !important;
-  transform: scale(1.03);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(232, 93, 4, 0.2);
 }
 
-/* Superscript count badge */
-.term-entry sup,
-.tags-list sup {
-  background: var(--cf-primary) !important;
-  color: #fff !important;
-  font-size: 0.7rem !important;
-  padding: 1px 6px !important;
-  border-radius: 10px !important;
-  top: -2px !important;
+/* --- Page headers (taxonomy pages) --- */
+.page-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0e6dc;
 }
 
-/* --- Taxonomy Pages (Ciudades/Tags headers) --- */
-.taxonomy-title h1,
 .page-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
   color: var(--cf-text-dark);
   position: relative;
-  display: inline-block;
 }
 
-.taxonomy-title h1::after,
 .page-header h1::after {
   content: "";
   display: block;
-  width: 60%;
-  height: 3px;
+  width: 60px;
+  height: 4px;
   background: var(--cf-primary);
   border-radius: 2px;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
-/* Post description under page header */
 .post-description {
-  color: #666;
-  font-size: 1rem;
+  color: #777;
+  font-size: 1.05rem;
+  margin-top: 0.8rem;
   max-width: 700px;
+  line-height: 1.7;
+}
+
+[data-scheme="dark"] .post-description {
+  color: #aaa;
+}
+
+/* --- Terms Grid (City Listing Page) --- */
+.terms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.term-card {
+  background: #fff;
+  border: 1px solid #f0e6dc;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.term-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(232, 93, 4, 0.1);
+  border-color: var(--cf-primary);
+}
+
+.term-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.4rem;
+  text-decoration: none;
+  color: var(--cf-text-dark) !important;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.term-card-link:hover {
+  color: var(--cf-primary) !important;
+}
+
+.term-card-count {
+  background: var(--cf-tag-bg);
+  color: #888;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.25rem 0.7rem;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+[data-scheme="dark"] .term-card {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+[data-scheme="dark"] .term-card:hover {
+  border-color: var(--cf-primary);
+}
+
+[data-scheme="dark"] .term-card-link {
+  color: #e0d6cc !important;
+}
+
+[data-scheme="dark"] .term-card-count {
+  background: #2d1f14;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .terms-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.8rem;
+  }
+  .term-card-link {
+    padding: 1rem 1.1rem;
+    font-size: 0.95rem;
+  }
 }
 
 /* --- Breadcrumbs --- */
 .breadcrumbs {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: #aaa;
+  margin-bottom: 1rem;
 }
 
 .breadcrumbs a {
   color: var(--cf-primary);
   font-weight: 500;
+  text-decoration: none;
 }
 
 .breadcrumbs a:hover {
@@ -230,74 +422,100 @@ body {
 .single .post-content {
   max-width: 750px;
   margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.85;
 }
 
 .single .post-content h2 {
-  color: var(--cf-text-dark);
-  border-bottom: 2px solid var(--cf-card-border);
-  padding-bottom: 0.4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0e6dc;
+  color: var(--cf-text-dark);
+}
+
+.single .post-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: var(--cf-text-dark);
 }
 
 .single .post-content a {
   color: var(--cf-primary);
-  font-weight: 600;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(232, 93, 4, 0.25);
+  transition: border-color 0.2s;
 }
 
 .single .post-content a:hover {
-  color: var(--cf-primary-dark);
+  border-bottom-color: var(--cf-primary);
 }
 
-/* Ordered lists in post body */
-.single .post-content ol > li {
-  padding-left: 0.5rem;
-  margin-bottom: 0.6rem;
-}
-
+/* Ordered lists with number badges */
 .single .post-content ol {
   counter-reset: step-counter;
   list-style: none;
   padding-left: 0;
 }
 
-.single .post-content ol > li::before {
+.single .post-content ol > li {
   counter-increment: step-counter;
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.7;
+}
+
+.single .post-content ol > li::before {
   content: counter(step-counter);
-  display: inline-flex;
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 26px;
+  width: 26px;
   height: 26px;
   background: var(--cf-primary);
   color: #fff;
   border-radius: 50%;
   font-size: 0.8rem;
   font-weight: 700;
-  margin-right: 0.6rem;
 }
 
 /* --- Footer --- */
 .footer {
-  border-top: 2px solid var(--cf-card-border);
-  margin-top: 3rem;
-  padding: 2rem 0;
+  border-top: 2px solid #f0e6dc;
+  margin-top: 4rem;
+  padding: 2.5rem 0 1.5rem 0;
   text-align: center;
   color: #888;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
 }
 
 .footer a {
   color: var(--cf-primary);
   font-weight: 500;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
 
 /* --- Pagination --- */
 .pagination a {
-  border: 1px solid var(--cf-card-border);
+  border: 1px solid #e0d6cc;
   border-radius: 8px;
   padding: 0.6rem 1.4rem;
   color: #555;
   font-weight: 500;
+  text-decoration: none;
   transition: all 0.2s;
 }
 
@@ -307,31 +525,80 @@ body {
   border-color: var(--cf-primary);
 }
 
-/* --- Scroll Progress Bar (subtle accent) --- */
-.progress-container {
-  background: var(--cf-card-border);
+/* --- TOC (Table of Contents) --- */
+.toc {
+  background: #fff9f0 !important;
+  border: 1px solid #f0e6dc !important;
+  border-radius: 10px !important;
 }
 
+[data-scheme="dark"] .toc {
+  background: #1e1a14 !important;
+  border-color: #333 !important;
+}
+
+.toc .inner {
+  color: var(--cf-text-dark) !important;
+}
+
+.toc a {
+  color: #666 !important;
+  text-decoration: none;
+}
+
+.toc a:hover {
+  color: var(--cf-primary) !important;
+}
+
+/* --- Scroll progress bar --- */
 .progress-bar {
-  background: var(--cf-primary);
+  background: var(--cf-primary) !important;
 }
 
-/* --- Responsive tweaks --- */
+/* --- Responsive --- */
 @media (max-width: 768px) {
-  .home-info {
-    padding: 1.8rem 1.4rem !important;
-    margin-bottom: 1.5rem !important;
+  .home-hero {
+    padding: 2rem 1.5rem !important;
+    border-radius: 10px;
   }
 
-  .home-info .entry-header h1 {
-    font-size: 1.4rem !important;
+  .home-hero h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .home-hero p {
+    font-size: 1rem !important;
   }
 
   .post-entry {
-    padding: 1.2rem 1.4rem;
+    padding: 1.3rem 1.4rem;
+    border-radius: 10px;
   }
 
   .post-entry .entry-header h2 {
     font-size: 1.1rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-cities {
+    gap: 0.4rem;
+  }
+
+  .hero-cities a {
+    font-size: 0.82rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero h1 {
+    font-size: 1.3rem !important;
+  }
+
+  .home-hero {
+    padding: 1.5rem 1.2rem !important;
   }
 }

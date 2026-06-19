@@ -1,0 +1,18 @@
+{{/* Custom home_info partial for ComprimeFotos Blog */}}
+{{- with site.Params.homeInfoParams }}
+<section class="home-hero">
+  <h1>{{ .Title | markdownify }}</h1>
+  <p>{{ .Content | markdownify }}</p>
+
+  {{/* City quick links */}}
+  {{- if site.Taxonomies.ciudades }}
+  <div class="hero-cities">
+    {{- range $name, $taxonomy := site.Taxonomies.ciudades }}
+    {{- with site.GetPage (printf "/ciudades/%s" $name) }}
+    <a href="{{ .Permalink }}" title="{{ .LinkTitle }}">{{ .LinkTitle }}</a>
+    {{- end }}
+  {{- end }}
+  </div>
+  {{- end }}
+</section>
+{{- end }}
