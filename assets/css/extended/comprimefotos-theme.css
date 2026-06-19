@@ -616,25 +616,27 @@ h1, h2, h3, h4 {
 
 /* --- Tags Grid — intensity gradient by article count via data-count attribute --- */
 .tags-section {
-  margin-bottom: 1.8rem;
+  margin-top: 1.6rem;
+  margin-bottom: 2rem;
 }
 
 .tags-section-title {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--cf-text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.75rem;
+  letter-spacing: 0.09em;
+  margin-bottom: 0.85rem;
   padding-left: 0.25rem;
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.6rem;
 }
 
 .tags-section-icon {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1;
+  opacity: 0.8;
 }
 
 .tags-grid {
@@ -1127,8 +1129,8 @@ h1, h2, h3, h4 {
   }
   .tag-card-name { font-size: 0.88rem; }
   .tag-card-count { font-size: 0.7rem; padding: 0.18rem 0.55rem; }
-  .tags-section { margin-bottom: 1.4rem; }
-  .tags-section-title { font-size: 0.85rem; }
+  .tags-section { margin-top: 1.2rem; margin-bottom: 1.5rem; }
+  .tags-section-title { font-size: 0.75rem; gap: 0.5rem; }
 
   /* Tag page header mobile */
   .tag-page-title { font-size: 1.6rem !important; }
@@ -1175,6 +1177,6 @@ h1, h2, h3, h4 {
     border-radius: 10px;
   }
   .tag-card-name { font-size: 0.82rem; }
-  .tags-section { margin-bottom: 1.2rem; }
-  .tags-section-title { font-size: 0.78rem; }
+  .tags-section { margin-top: 1rem; margin-bottom: 1.2rem; }
+  .tags-section-title { font-size: 0.7rem; gap: 0.45rem; }
 }
