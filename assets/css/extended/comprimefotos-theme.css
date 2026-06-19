@@ -16,8 +16,8 @@
   --cf-card-border: #e2e8f0;
   --cf-tag-bg: #eef6fb;
   --cf-text-dark: #1e293b;
-  --cf-text-body: #334155;
-  --cf-text-muted: #64748b;
+  --cf-text-body: #1f2937;
+  --cf-text-muted: #475569;
   --cf-shadow: 0 2px 12px rgba(37, 150, 190, 0.08);
   --cf-radius: 12px;
   --cf-radius-sm: 8px;
@@ -47,7 +47,7 @@ html { font-size: 16px; }
 body {
   font-family: var(--cf-font) !important;
   background: var(--cf-bg) !important;
-  color: var(--cf-text-body);
+  color: #1f2937 !important;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
@@ -819,7 +819,7 @@ h1, h2, h3, h4 {
 .single .post-content li,
 .single .post-content ol,
 .single .post-content ul {
-  color: #2d3748;
+  color: #1f2937 !important;
 }
 
 .single .post-content h2 {
