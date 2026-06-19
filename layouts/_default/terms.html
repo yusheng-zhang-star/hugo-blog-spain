@@ -68,11 +68,22 @@
   <p class="tag-hint">Temáticas populares: compresión WhatsApp, Instagram, envío por móvil y más.</p>
 </header>
 
-<div class="tags-grid">
+{{/* --- Group 1: General Function Tags --- */}}
+<div class="tags-section">
+  <h3 class="tags-section-title">
+    <span class="tags-section-icon">⚡</span> Herramientas generales
+  </h3>
+  <div class="tags-grid">
   {{- $type := .Type }}
+  {{- $cities := slice "Madrid" "Barcelona" "Valencia" "Sevilla" "Zaragoza" "Málaga" "Malaga" "Bilbao" "Costa Del Sol" }}
   {{- range $key, $value := .Data.Terms.Alphabetical }}
   {{- $name := .Name }}
   {{- $count := .Count }}
+  {{- $isCityTag := false }}
+  {{- range $cities }}
+    {{- if and (not $isCityTag) (ne (findRE . $name) "") }}{{ $isCityTag = true }}{{ end }}
+  {{- end }}
+  {{- if not $isCityTag }}
   {{- with site.GetPage (printf "/%s/%s" $type $name) }}
   <a href="{{ .Permalink }}" class="tag-card"
      data-count="{{ $count }}">
@@ -81,19 +92,50 @@
   </a>
   {{- end }}
   {{- end }}
+  {{- end }}
+  </div>
 </div>
 
-<div class="ciud-cta-banner">
-  <div class="ciud-cta-inner">
+{{/* --- Group 2: City-Specific WhatsApp Tags --- */}}
+<div class="tags-section">
+  <h3 class="tags-section-title">
+    <span class="tags-section-icon">🏙️</span> Guías WhatsApp por ciudad
+  </h3>
+  <div class="tags-grid">
+  {{- $type := .Type }}
+  {{- $cities := slice "Madrid" "Barcelona" "Valencia" "Sevilla" "Zaragoza" "Málaga" "Malaga" "Bilbao" "Costa Del Sol" }}
+  {{- range $key, $value := .Data.Terms.Alphabetical }}
+  {{- $name := .Name }}
+  {{- $count := .Count }}
+  {{- $isCityTag := false }}
+  {{- range $cities }}
+    {{- if and (not $isCityTag) (ne (findRE . $name) "") }}{{ $isCityTag = true }}{{ end }}
+  {{- end }}
+  {{- if $isCityTag }}
+  {{- with site.GetPage (printf "/%s/%s" $type $name) }}
+  <a href="{{ .Permalink }}" class="tag-card"
+     data-count="{{ $count }}">
+    <span class="tag-card-name">{{ .LinkTitle }}</span>
+    <span class="tag-card-count">{{ $count }} artículo{{ if ne $count 1 }}s{{ end }}</span>
+  </a>
+  {{- end }}
+  {{- end }}
+  {{- end }}
+  </div>
+</div>
+
+{{/* --- CTA Banner — Tags-specific gradient + tighter spacing --- */}}
+<div class="ciud-cta-banner tags-cta-banner">
+  <div class="ciud-cta-inner tags-cta-inner">
     <div class="ciud-cta-text">
-      <strong>¿Necesitas comprimir tus fotos?</strong>
-      <span>Prueba nuestra herramienta gratuita sin registro ni límites.</span>
+      <strong>¿Necesitas comprimir fotos gratis?</strong>
+      <span>Comprime tus fotos sin registro ni límites. Herramienta online instantánea.</span>
     </div>
     <a href="https://comprimefotos.com/?utm_source=blog&utm_medium=tags&utm_campaign=cta_bottom"
-       class="btn-primary ciud-cta-btn"
+       class="btn-primary ciud-cta-btn tags-cta-btn"
        target="_blank"
        rel="noopener">
-      Ir a ComprimeFotos.com
+      Ir a ComprimeFotos.com →
     </a>
   </div>
 </div>
