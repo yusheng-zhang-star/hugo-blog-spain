@@ -2,6 +2,7 @@ baseURL = 'https://blog.comprimefotos.com/'
 defaultContentLanguage = 'es'
 title = 'ComprimeFotos Blog — Guías de Compresión de Imágenes en España'
 theme = 'PaperMod'
+buildFuture = true
 
 [params]
   description = 'Guías de compresión de imágenes y optimización para negocios locales en España. Comprime fotos para Instagram, WhatsApp y redes sociales.'
