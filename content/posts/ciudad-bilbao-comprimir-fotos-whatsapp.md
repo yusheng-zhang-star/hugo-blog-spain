@@ -10,7 +10,6 @@ keywords: "comprimir whatsapp bilbao, reducir tamaño foto online, herramienta g
 thumbnail: "/images/blog/bilbao-whatsapp-compresion.jpg"
 ---
 
-# Comprimir fotos para WhatsApp en Bilbao | Herramienta online gratuita sin apps
 
 ## Introducción
 

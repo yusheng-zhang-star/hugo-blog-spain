@@ -10,7 +10,6 @@ keywords: "comprimir whatsapp sevilla, reducir tamaño foto gratis, herramienta 
 thumbnail: "/images/blog/sevilla-whatsapp-compresion.jpg"
 ---
 
-# Comprimir fotos para WhatsApp en Sevilla gratis | Sin apps ni registro
 
 ## Introducción
 

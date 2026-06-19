@@ -10,7 +10,6 @@ keywords: "comprimir whatsapp barcelona, reducir tamaño imagen gratis, enviar f
 thumbnail: "/images/blog/barcelona-whatsapp-compresion.jpg"
 ---
 
-# Comprimir fotos para WhatsApp en Barcelona sin instalar programas | Guía 2026
 
 ## Introducción
 

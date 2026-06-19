@@ -10,7 +10,6 @@ keywords: "comprimir whatsapp malaga, reducir tamaño foto gratis, herramienta o
 thumbnail: "/images/blog/malaga-whatsapp-compresion.jpg"
 ---
 
-# Comprimir fotos para WhatsApp en Málaga | Herramienta gratuita para Costa del Sol
 
 ## Introducción
 

@@ -10,7 +10,6 @@ keywords: "comprimir whatsapp zaragoza, reducir tamaño foto online, herramienta
 thumbnail: "/images/blog/zaragoza-whatsapp-compresion.jpg"
 ---
 
-# Comprimir fotos para WhatsApp en Zaragoza online | Gratis y sin registro
 
 ## Introducción
 

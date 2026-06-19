@@ -10,7 +10,6 @@ keywords: "comprimir whatsapp valencia, reducir peso foto online, herramienta gr
 thumbnail: "/images/blog/valencia-whatsapp-compresion.jpg"
 ---
 
-# Comprimir fotos para WhatsApp en Valencia | Herramienta online gratis para comercios
 
 ## Introducción
 

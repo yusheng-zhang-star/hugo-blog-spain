@@ -10,7 +10,6 @@ keywords: "comprimir fotos whatsapp madrid, reducir peso imagen sin perder calid
 thumbnail: "/images/blog/madrid-whatsapp-compresion.jpg"
 ---
 
-# Comprimir fotos para WhatsApp en Madrid sin perder calidad | Guía 2026
 
 ## Introducción
 
