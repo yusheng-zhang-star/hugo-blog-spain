@@ -39,6 +39,8 @@ Esta herramienta está pensada para cualquier persona que necesite reducir el pe
 
 Visita <a href="https://comprimefotos.com">comprimefotos.com</a> y prueba a comprimir una foto ahora mismo. Verás la diferencia en el peso sin apenas notar cambios en la imagen.
 
+![Comprimir fotos antes de enviar por email en Málaga](/images/blog/malaga-email-body.jpg)
+
 ## Ventajas para usuarios de Málaga
 
 Málaga es una ciudad donde muchas gestiones se hacen por correo electrónico. Ya sea para enviar fotos de un apartamento en alquiler por email a un posible inquilino, o mandar fotos del trabajo terminado a un cliente, tener una herramienta rápida y gratuita en el navegador te ahorra tiempo cada día. Al ser una herramienta online, no ocupas memoria en el móvil, no tienes que actualizar ninguna app, y funciona igual en el metro de Málaga (L1–L2) que en casa con WiFi. Además, para los comercios locales de Málaga que no tienen presupuesto para software de edición, esta opción gratuita es la manera más sencilla de optimizar sus fotos antes de enviarlas por correo.
