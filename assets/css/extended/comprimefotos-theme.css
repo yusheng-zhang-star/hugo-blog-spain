@@ -1207,3 +1207,185 @@ h1, h2, h3, h4 {
   .tags-section { margin-top: 1rem; margin-bottom: 1.2rem; }
   .tags-section-title { font-size: 0.7rem; gap: 0.45rem; }
 }
+
+/* ============================================
+   Single Post Page v8 — 博文单页视觉优化
+   ============================================ */
+
+/* --- Cover Image on single post (rounded, no sharp corners) --- */
+.single .cover-img-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(37, 150, 190, 0.12);
+}
+
+.single .cover-img {
+  border-radius: 16px;
+}
+
+/* --- Post Meta (date / reading time) — slightly larger for readability --- */
+.post-meta {
+  font-size: 0.9rem !important;
+  color: var(--cf-text-muted);
+  margin-bottom: 1rem !important;
+}
+
+.post-meta a {
+  color: var(--cf-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.post-meta a:hover {
+  text-decoration: underline;
+}
+
+/* --- TOC (Table of Contents) — brand color adaptation --- */
+details.toc {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+  background: linear-gradient(135deg, #fafcff, #f5faff);
+  box-shadow: 0 2px 8px rgba(37, 150, 190, 0.06);
+}
+
+details.toc[open] summary,
+details.toc summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+details.toc summary::-webkit-details-marker {
+  display: none;
+}
+
+details.toc .title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1a7aa3;
+  letter-spacing: 0.02em;
+}
+
+details.toc .inner ul {
+  padding-left: 1.2rem;
+}
+
+details.toc .inner ul li {
+  margin: 0.35rem 0;
+}
+
+details.toc .inner ul li a {
+  color: #334155;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+  padding: 2px 6px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+details.toc .inner ul li a:hover {
+  color: #2596be;
+  background: rgba(37, 150, 190, 0.08);
+}
+
+/* Active TOC item (when scrolled into view) */
+details.toc .inner ul li a:target,
+details.toc .inner ul li a.active {
+  color: #2596be;
+  font-weight: 600;
+  background: rgba(37, 150, 190, 0.1);
+}
+
+/* Dark mode TOC */
+[data-scheme="dark"] details.toc {
+  border-color: #2d3748;
+  background: linear-gradient(135deg, #1a2332, #171e2a);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+[data-scheme="dark"] details.toc .title { color: #5baad5; }
+[data-scheme="dark"] details.toc .inner ul li a { color: #a0aec0; }
+[data-scheme="dark"] details.toc .inner ul li a:hover { color: #5baad5; }
+
+/* --- Related Posts Section --- */
+.related-contents {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e8f4fc;
+}
+
+.related-contents h2 {
+  color: #1a7aa3 !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 1.2rem !important;
+}
+
+.related-contents .related-entry {
+  border: 1px solid #e8f4fc;
+  border-radius: 14px;
+  padding: 1rem 1.3rem;
+  margin-bottom: 1rem;
+  transition: all 0.25s ease;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(37, 150, 190, 0.05);
+}
+
+.related-contents .related-entry:hover {
+  border-color: #2596be;
+  box-shadow: 0 4px 16px rgba(37, 150, 190, 0.12);
+  transform: translateY(-2px);
+}
+
+.related-contents .related-entry span.entry-title {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+[data-scheme="dark"] .related-contents { border-top-color: #2d3748; }
+[data-scheme="dark"] .related-contents .related-entry {
+  border-color: #2d3748;
+  background: #1a202c;
+}
+[data-scheme="dark"] .related-contents .related-entry span.entry-title { color: #e2e8f0; }
+
+/* --- Post Nav Links (previous/next) --- */
+.post-nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e8f4fc;
+}
+
+.post-nav-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.3rem;
+  border-radius: 12px;
+  background: #f0f9ff;
+  color: #1a7aa3;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: all 0.2s ease;
+  max-width: 48%;
+}
+
+.post-nav-links a:hover {
+  background: #2596be;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 150, 190, 0.2);
+}
+
+/* Mobile adjustments for single post */
+@media (max-width: 768px) {
+  .single .cover-img-wrapper { border-radius: 12px; }
+  .single .cover-img { border-radius: 12px; }
+  .post-meta { font-size: 0.85rem !important; }
+  details.toc { padding: 1rem; border-radius: 12px; }
+  .post-nav-links { flex-direction: column; }
+  .post-nav-links a { max-width: 100%; }
+}

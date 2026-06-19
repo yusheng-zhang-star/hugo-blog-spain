@@ -15,6 +15,14 @@ buildFuture = true
   ShowCodeCopyButtons = false
   ShowWordCount = false
 
+  # --- Single page settings ---
+  [params.single]
+    hideTitleBelowCover = true
+    showToc = true
+    tocPosition = "right"
+    showRelated = true
+    relatedCount = 3
+
   # Custom CSS theme extension
   [params.assets]
     disableFingerprinting = false
