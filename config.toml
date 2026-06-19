@@ -1,23 +1,61 @@
 baseURL = 'https://blog.comprimefotos.com/'
 languageCode = 'es-es'
 defaultContentLanguage = 'es'
-title = 'ComprimeFotos Blog SEO'
+title = 'ComprimeFotos Blog — Guías de Compresión de Imágenes en España'
 theme = 'PaperMod'
 
 [params]
-  description = 'Guías de compresión de imágenes para negocios locales en España'
+  description = 'Guías de compresión de imágenes y optimización para negocios locales en España. Comprime fotos para Instagram, WhatsApp y redes sociales.'
   author = 'ComprimeFotos'
+  keywords = ['comprimir fotos', 'reducir tamaño imagen', 'optimización imágenes', 'Instagram', 'WhatsApp', 'España']
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = false
-  ShowWordCount = true
+  ShowWordCount = false
 
 [params.homeInfoParams]
   Title = 'ComprimeFotos Blog SEO'
-  Content = 'Guías y tutoriales de compresión de imágenes para negocios locales en España. Mejora tu presencia en Instagram, WhatsApp y redes sociales.'
+  Content = 'Guías expertas de compresión de imágenes para negocios locales en todas las ciudades de España. Optimiza tus fotos para Instagram, WhatsApp y redes sociales.'
+
+[params.social]
+  twitter = 'comprimefotos'
 
 # 城市分类（taxonomy）
 [taxonomies]
   ciudad = 'ciudades'
+  tag = 'tags'
+
+# 配置（sitemap、RSS、SEO）
+[sitemap]
+  changefreq = 'weekly'
+  priority = 0.5
+  filename = 'sitemap.xml'
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+  section = ['HTML', 'RSS']
+
+[related]
+  threshold = 80
+  toLower = true
+  [[related.indices]]
+    name = 'ciudades'
+    weight = 80
+  [[related.indices]]
+    name = 'tags'
+    weight = 60
+
+# 菜单
+[menu]
+[[menu.main]]
+  identifier = 'ciudades'
+  name = 'Ciudades'
+  url = '/ciudades/'
+  weight = 10
+[[menu.main]]
+  identifier = 'tags'
+  name = 'Tags'
+  url = '/tags/'
+  weight = 20
