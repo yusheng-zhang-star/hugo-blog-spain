@@ -820,6 +820,12 @@ h1, h2, h3, h4 {
   display: none !important;
 }
 
+/* Hide PaperMod heading anchor # symbol on all headings */
+.single .post-content .anchor,
+.post-content .anchor {
+  display: none !important;
+}
+
 .single .post-content p,
 .single .post-content li,
 .single .post-content ol,
