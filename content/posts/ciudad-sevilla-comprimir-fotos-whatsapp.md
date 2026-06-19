@@ -2,6 +2,7 @@
 title: "Comprimir fotos para WhatsApp en Sevilla gratis | Sin apps ni registro"
 date: 2026-06-19T15:04:00+02:00
 draft: false
+ciudades: ["sevilla"]
 tags: ["comprimir whatsapp Sevilla", "reducir peso imagen online", "herramienta gratuita Sevilla", "enviar fotos rapidas"]
 categories: ["Herramientas online", "Guías de ciudad España"]
 description: "Comprime fotos para WhatsApp en Sevilla desde el navegador. Ideal para comercios del casco antiguo, Triana y Nervión que envían productos y servicios por mensajería a clientes."

@@ -2,6 +2,7 @@
 title: "Comprimir fotos para WhatsApp en Málaga | Herramienta gratuita para Costa del Sol"
 date: 2026-06-19T15:06:00+02:00
 draft: false
+ciudades: ["malaga"]
 tags: ["comprimir whatsapp Malaga", "reducir peso imagen online", "herramienta gratis fotos", "enviar fotos costa del sol"]
 categories: ["Herramientas online", "Guías de ciudad España"]
 description: "Comprime fotos para WhatsApp en Málaga y la Costa del Sol sin instalar nada. Ideal para hostelería, inmobiliarias y comercios turísticos que envían imágenes a clientes por mensajería."

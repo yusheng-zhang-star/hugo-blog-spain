@@ -1,0 +1,337 @@
+/* ============================================
+   ComprimeFotos Blog — Custom Styles
+   Brand-consistent theme extensions for PaperMod
+   ============================================ */
+
+/* --- CSS Variables (Brand Palette) --- */
+:root {
+  --cf-primary: #e85d04;       /* Brand orange */
+  --cf-primary-dark: #dc2f02;  /* Deep orange for hover */
+  --cf-primary-light: #ffba08; /* Light accent */
+  --cf-bg-warm: #fffafo;       /* Warm white background */
+  --cf-card-border: #f4d3bc;   /* Subtle warm border */
+  --cf-tag-bg: #fef0da;        /* Tag background */
+  --cf-text-dark: #1a1a2e;
+  --cf-shadow: 0 2px 12px rgba(232, 93, 4, 0.08);
+  --cf-radius: 10px;
+}
+
+/* Dark mode adjustments */
+[data-scheme="dark"] {
+  --cf-card-border: #3d2b1f;
+  --cf-tag-bg: #2d1f14;
+  --cf-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Body & Background --- */
+body {
+  background: var(--cf-bg-warm);
+}
+
+[data-scheme="dark"] body {
+  background: #181818;
+}
+
+/* --- Top Navbar / Header --- */
+.top-bar, nav {
+  border-bottom: 2px solid var(--cf-primary) !important;
+}
+
+.logo a, .logo span {
+  color: var(--cf-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* Nav links */
+#menu a span {
+  color: #444;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+#menu a:hover span,
+#menu a:focus span {
+  color: var(--cf-primary) !important;
+}
+
+/* --- Home Info Section (Intro Banner) --- */
+.home-info {
+  background: linear-gradient(135deg, var(--cf-primary) 0%, var(--cf-primary-dark) 100%) !important;
+  border-radius: var(--cf-radius) !important;
+  padding: 2.5rem !important;
+  margin-bottom: 2rem !important;
+  box-shadow: var(--cf-shadow) !important;
+  border: none !important;
+}
+
+.home-info .entry-header h1 {
+  color: #fff !important;
+  font-size: 1.8rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 0.8rem !important;
+}
+
+.home-info .entry-content p {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+}
+
+.home-info .entry-footer {
+  display: none; /* Hide empty social icons area */
+}
+
+/* --- Post Cards (Article List) --- */
+.post-entry {
+  background: #fff;
+  border: 1px solid var(--cf-card-border);
+  border-radius: var(--cf-radius);
+  padding: 1.6rem 1.8rem;
+  margin-bottom: 1.2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.post-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--cf-shadow);
+  border-color: var(--cf-primary);
+}
+
+[data-scheme="dark"] .post-entry {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+[data-scheme="dark"] .post-entry:hover {
+  border-color: var(--cf-primary);
+}
+
+/* First entry (featured post on homepage) */
+.first-entry:not(.home-info) {
+  background: linear-gradient(135deg, #fff 0%, var(--cf-bg-warm) 100%);
+  border-left: 4px solid var(--cf-primary);
+  padding: 2rem 2rem;
+}
+
+[data-scheme="dark"] .first-entry:not(.home-info) {
+  background: linear-gradient(135deg, #222 0%, #1a1a1a 100%);
+}
+
+/* Post titles */
+.post-entry .entry-header h2 {
+  color: var(--cf-text-dark);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+
+.post-entry .entry-header h2 a {
+  color: inherit;
+}
+
+.post-entry .entry-header h2 a:hover {
+  color: var(--cf-primary);
+}
+
+/* Post summary/excerpt text */
+.entry-content p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* Post meta footer (date, read time, author) */
+.entry-footer span {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.entry-footer span:first-child::before {
+  content: "📅 ";
+  font-style: normal;
+}
+
+/* --- Tags Page Styling --- */
+.term-list .term-entry a,
+.tags-list a {
+  background: var(--cf-tag-bg) !important;
+  border: 1px solid var(--cf-card-border) !important;
+  border-radius: 20px !important;
+  padding: 0.5rem 1.2rem !important;
+  color: #555 !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.tags-list a:hover,
+.term-list .term-entry a:hover {
+  background: var(--cf-primary) !important;
+  color: #fff !important;
+  border-color: var(--cf-primary) !important;
+  transform: scale(1.03);
+}
+
+/* Superscript count badge */
+.term-entry sup,
+.tags-list sup {
+  background: var(--cf-primary) !important;
+  color: #fff !important;
+  font-size: 0.7rem !important;
+  padding: 1px 6px !important;
+  border-radius: 10px !important;
+  top: -2px !important;
+}
+
+/* --- Taxonomy Pages (Ciudades/Tags headers) --- */
+.taxonomy-title h1,
+.page-header h1 {
+  color: var(--cf-text-dark);
+  position: relative;
+  display: inline-block;
+}
+
+.taxonomy-title h1::after,
+.page-header h1::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: var(--cf-primary);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* Post description under page header */
+.post-description {
+  color: #666;
+  font-size: 1rem;
+  max-width: 700px;
+}
+
+/* --- Breadcrumbs --- */
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.breadcrumbs a {
+  color: var(--cf-primary);
+  font-weight: 500;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* --- Single Post Page --- */
+.single .post-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.single .post-content h2 {
+  color: var(--cf-text-dark);
+  border-bottom: 2px solid var(--cf-card-border);
+  padding-bottom: 0.4rem;
+  margin-top: 2.5rem;
+}
+
+.single .post-content a {
+  color: var(--cf-primary);
+  font-weight: 600;
+}
+
+.single .post-content a:hover {
+  color: var(--cf-primary-dark);
+}
+
+/* Ordered lists in post body */
+.single .post-content ol > li {
+  padding-left: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.single .post-content ol {
+  counter-reset: step-counter;
+  list-style: none;
+  padding-left: 0;
+}
+
+.single .post-content ol > li::before {
+  counter-increment: step-counter;
+  content: counter(step-counter);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 26px;
+  background: var(--cf-primary);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-right: 0.6rem;
+}
+
+/* --- Footer --- */
+.footer {
+  border-top: 2px solid var(--cf-card-border);
+  margin-top: 3rem;
+  padding: 2rem 0;
+  text-align: center;
+  color: #888;
+  font-size: 0.88rem;
+}
+
+.footer a {
+  color: var(--cf-primary);
+  font-weight: 500;
+}
+
+/* --- Pagination --- */
+.pagination a {
+  border: 1px solid var(--cf-card-border);
+  border-radius: 8px;
+  padding: 0.6rem 1.4rem;
+  color: #555;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.pagination a:hover {
+  background: var(--cf-primary);
+  color: #fff;
+  border-color: var(--cf-primary);
+}
+
+/* --- Scroll Progress Bar (subtle accent) --- */
+.progress-container {
+  background: var(--cf-card-border);
+}
+
+.progress-bar {
+  background: var(--cf-primary);
+}
+
+/* --- Responsive tweaks --- */
+@media (max-width: 768px) {
+  .home-info {
+    padding: 1.8rem 1.4rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .home-info .entry-header h1 {
+    font-size: 1.4rem !important;
+  }
+
+  .post-entry {
+    padding: 1.2rem 1.4rem;
+  }
+
+  .post-entry .entry-header h2 {
+    font-size: 1.1rem;
+  }
+}

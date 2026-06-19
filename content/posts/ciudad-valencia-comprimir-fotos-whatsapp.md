@@ -2,6 +2,7 @@
 title: "Comprimir fotos para WhatsApp en Valencia | Herramienta online gratis para comercios"
 date: 2026-06-19T15:03:00+02:00
 draft: false
+ciudades: ["valencia"]
 tags: ["comprimir whatsapp Valencia", "reducir peso imagen tienda", "herramienta gratuita online", "fotos movil ligeras"]
 categories: ["Herramientas online", "Guías de ciudad España"]
 description: "Comprime fotos para WhatsApp en Valencia sin instalar nada. Perfecto para comercios del centro, mercado Central y tiendas de barrio que envían productos por mensajería a clientes."

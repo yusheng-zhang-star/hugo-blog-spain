@@ -2,6 +2,7 @@
 title: "Comprimir fotos para WhatsApp en Barcelona sin instalar programas | Guía 2026"
 date: 2026-06-19T15:02:00+02:00
 draft: false
+ciudades: ["barcelona"]
 tags: ["comprimir whatsapp Barcelona", "reducir peso foto gratis", "herramienta online fotos", "enviar imágenes móvil"]
 categories: ["Herramientas online", "Guías de ciudad España"]
 description: "Comprime fotos para WhatsApp en Barcelona desde el navegador, sin descargas ni registro. Ideal para comercios del Raval, Gràcia y Eixample que envían productos por mensajería."

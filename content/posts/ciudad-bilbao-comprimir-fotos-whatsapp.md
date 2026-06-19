@@ -2,6 +2,7 @@
 title: "Comprimir fotos para WhatsApp en Bilbao | Herramienta online gratuita sin apps"
 date: 2026-06-19T15:07:00+02:00
 draft: false
+ciudades: ["bilbao"]
 tags: ["comprimir whatsapp Bilbao", "reducir peso imagen gratis", "herramienta online fotos", "enviar imágenes País Vasco"]
 categories: ["Herramientas online", "Guías de ciudad España"]
 description: "Comprime fotos para WhatsApp en Bilbao y el País Vasco desde el navegador. Perfecto para comercios de la Casco Viejo, Deusto e industrias locales que envían productos por mensajería."

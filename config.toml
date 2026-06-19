@@ -15,9 +15,19 @@ buildFuture = true
   ShowCodeCopyButtons = false
   ShowWordCount = false
 
+  # Custom CSS theme extension
+  [params.assets]
+    disableFingerprinting = false
+    favicon = "/favicon.ico"
+    favicon16x16 = "/favicon-16x16.png"
+    favicon32x32 = "/favicon-32x32.png"
+  [params.label]
+    text = "ComprimeFotos"
+    icon = "/favicon.ico"
+
 [params.homeInfoParams]
-  Title = 'ComprimeFotos Blog SEO'
-  Content = 'Guías expertas de compresión de imágenes para negocios locales en todas las ciudades de España. Optimiza tus fotos para Instagram, WhatsApp y redes sociales.'
+  Title = 'ComprimeFotos Blog — Guías de Compresión de Imágenes'
+  Content = '**Guías de compresión de imágenes para negocios locales en todas las ciudades de España.** Optimiza tus fotos para Instagram, WhatsApp y redes sociales con nuestras guías paso a paso por ciudad.'
 
 [params.social]
   twitter = 'comprimefotos'
@@ -26,6 +36,12 @@ buildFuture = true
 [taxonomies]
   ciudad = 'ciudades'
   tag = 'tags'
+
+# 分页：首页显示所有文章
+paginate = 20
+
+# 主内容区（确保 posts 目录被识别）
+mainSections = ["posts"]
 
 [sitemap]
   changefreq = 'weekly'
