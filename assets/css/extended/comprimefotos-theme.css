@@ -434,6 +434,38 @@ h1, h2, h3, h4 {
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #f0e6dc;
   color: var(--cf-text-dark);
+  position: relative;
+}
+
+.single .post-content h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 1.1em;
+  background: var(--cf-primary);
+  border-radius: 2px;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+.single .post-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: var(--cf-text-dark);
+  padding-left: 0.8rem;
+  border-left: 3px solid var(--cf-primary-light);
+}
+
+.single .post-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: var(--cf-text-dark);
 }
 
 .single .post-content h3 {
@@ -488,24 +520,109 @@ h1, h2, h3, h4 {
   font-weight: 700;
 }
 
-/* --- Footer --- */
-.footer {
-  border-top: 2px solid #f0e6dc;
-  margin-top: 4rem;
-  padding: 2.5rem 0 1.5rem 0;
-  text-align: center;
-  color: #888;
-  font-size: 0.9rem;
+/* --- Footer (Custom) --- */
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-.footer a {
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
   color: var(--cf-primary);
   font-weight: 500;
+  font-size: 0.95rem;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
-.footer a:hover {
+.footer-links a:hover {
+  color: var(--cf-primary-dark);
   text-decoration: underline;
+}
+
+.footer-sep {
+  color: #ccc;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #999;
+  line-height: 1.6;
+}
+
+[data-scheme="dark"] .footer-sep {
+  color: #555;
+}
+
+[data-scheme="dark"] .footer-copy {
+  color: #777;
+}
+
+/* --- Post Content: Images --- */
+.single .post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Post Content: Blockquotes --- */
+.single .post-content blockquote {
+  background: #fff9f0;
+  border-left: 4px solid var(--cf-primary);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  color: #666;
+  font-style: italic;
+}
+
+[data-scheme="dark"] .single .post-content blockquote {
+  background: #1e1a14;
+  color: #aaa;
+}
+
+/* --- Post Content: Code blocks --- */
+.single .post-content pre {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.single .post-content code {
+  background: #f5f0eb;
+  color: var(--cf-primary-dark);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+[data-scheme="dark"] .single .post-content code {
+  background: #2a2a2a;
+  color: #ffba08;
+}
+
+/* --- Post Content: Horizontal Rule --- */
+.single .post-content hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cf-primary), transparent);
+  margin: 2.5rem 0;
+  border-radius: 1px;
 }
 
 /* --- Pagination --- */
