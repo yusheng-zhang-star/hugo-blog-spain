@@ -1,0 +1,23 @@
+baseURL = 'https://blog.comprimefotos.com/'
+languageCode = 'es-es'
+defaultContentLanguage = 'es'
+title = 'ComprimeFotos Blog SEO'
+theme = 'PaperMod'
+
+[params]
+  description = 'Guías de compresión de imágenes para negocios locales en España'
+  author = 'ComprimeFotos'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowWordCount = true
+
+[params.homeInfoParams]
+  Title = 'ComprimeFotos Blog SEO'
+  Content = 'Guías y tutoriales de compresión de imágenes para negocios locales en España. Mejora tu presencia en Instagram, WhatsApp y redes sociales.'
+
+# 城市分类（taxonomy）
+[taxonomies]
+  ciudad = 'ciudades'
