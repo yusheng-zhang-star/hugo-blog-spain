@@ -1,5 +1,4 @@
 baseURL = 'https://blog.comprimefotos.com/'
-languageCode = 'es-es'
 defaultContentLanguage = 'es'
 title = 'ComprimeFotos Blog — Guías de Compresión de Imágenes en España'
 theme = 'PaperMod'
@@ -27,7 +26,6 @@ theme = 'PaperMod'
   ciudad = 'ciudades'
   tag = 'tags'
 
-# 配置（sitemap、RSS、SEO）
 [sitemap]
   changefreq = 'weekly'
   priority = 0.5
@@ -47,7 +45,6 @@ theme = 'PaperMod'
     name = 'tags'
     weight = 60
 
-# 菜单
 [menu]
 [[menu.main]]
   identifier = 'ciudades'
