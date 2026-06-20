@@ -1,7 +1,7 @@
 ---
 title: "Comprimir fotos para email en Málaga y ahorrar espacio | Guía 2026"
 date: 2026-06-19T20:50:00+02:00
-draft: false
+draft: true
 ciudades: ["malaga"]
 tags: ["comprimir fotos email malaga", "reducir adjunto correo malaga", "optimizar fotos email", "herramienta gratuita online"]
 categories: ["Herramientas online", "Guías de ciudad España"]

@@ -1,7 +1,7 @@
 ---
 title: "Comprimir fotos para email en Zaragoza sin complicaciones | Guía 2026"
 date: 2026-06-19T20:40:00+02:00
-draft: false
+draft: true
 ciudades: ["zaragoza"]
 tags: ["comprimir fotos email zaragoza", "reducir adjunto correo zaragoza", "optimizar fotos email", "herramienta gratuita online"]
 categories: ["Herramientas online", "Guías de ciudad España"]

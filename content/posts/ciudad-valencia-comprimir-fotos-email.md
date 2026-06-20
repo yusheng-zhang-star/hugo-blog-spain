@@ -1,7 +1,7 @@
 ---
 title: "Comprimir fotos para email en Valencia sin límites | Guía 2026"
 date: 2026-06-19T20:20:00+02:00
-draft: false
+draft: true
 ciudades: ["valencia"]
 tags: ["comprimir fotos email valencia", "reducir adjunto correo valencia", "optimizar fotos email", "herramienta gratuita online"]
 categories: ["Herramientas online", "Guías de ciudad España"]

@@ -1,7 +1,7 @@
 ---
 title: "Comprimir fotos para email en Bilbao paso a paso | Guía 2026"
 date: 2026-06-19T21:00:00+02:00
-draft: false
+draft: true
 ciudades: ["bilbao"]
 tags: ["comprimir fotos email bilbao", "reducir adjunto correo bilbao", "optimizar fotos email", "herramienta gratuita online"]
 categories: ["Herramientas online", "Guías de ciudad España"]

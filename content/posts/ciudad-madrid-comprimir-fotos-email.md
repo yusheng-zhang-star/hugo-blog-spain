@@ -1,7 +1,7 @@
 ---
 title: "Comprimir fotos para email en Madrid sin perder calidad | Guía 2026"
 date: 2026-06-19T20:00:00+02:00
-draft: false
+draft: true
 ciudades: ["madrid"]
 tags: ["comprimir fotos email", "Madrid herramienta gratuita", "reducir peso imagen adjunto", "enviar fotos correo"]
 categories: ["Herramientas online", "Guías de ciudad España"]

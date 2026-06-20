@@ -1,7 +1,7 @@
 ---
 title: "Comprimir fotos para WhatsApp en Madrid sin perder calidad | Guía 2026"
 date: 2026-06-19T14:50:00+02:00
-draft: false
+draft: true
 ciudades: ["madrid"]
 tags: ["comprimir fotos whatsapp", "Madrid herramienta gratuita", "reducir peso imagen", "enviar fotos movil"]
 categories: ["Herramientas online", "Guías de ciudad España"]

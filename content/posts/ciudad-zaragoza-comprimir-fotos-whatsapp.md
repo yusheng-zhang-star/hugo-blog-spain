@@ -1,7 +1,7 @@
 ---
 title: "Comprimir fotos para WhatsApp en Zaragoza online | Gratis y sin registro"
 date: 2026-06-19T15:05:00+02:00
-draft: false
+draft: true
 ciudades: ["zaragoza"]
 tags: ["comprimir whatsapp Zaragoza", "reducir peso imagen gratis", "herramienta online fotos", "enviar imágenes móvil"]
 categories: ["Herramientas online", "Guías de ciudad España"]

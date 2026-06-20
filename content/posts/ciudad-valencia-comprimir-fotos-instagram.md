@@ -1,7 +1,7 @@
 ---
 title: "Reducir el peso de fotos para Instagram en Valencia | Guía 2026"
 date: 2026-06-20T00:30:00+02:00
-draft: false
+draft: true
 ciudades: ["valencia"]
 tags: ["reducir peso fotos instagram", "Valencia Instagram comprimir", "optimizar imagenes redes sociales", "comprimir fotos publicacion instagram"]
 categories: ["Herramientas online", "Guías de ciudad España"]

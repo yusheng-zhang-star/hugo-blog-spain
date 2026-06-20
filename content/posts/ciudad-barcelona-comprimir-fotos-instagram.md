@@ -1,7 +1,7 @@
 ---
 title: "Optimizar imágenes para Instagram en Barcelona | Guía 2026"
 date: 2026-06-20T00:25:00+02:00
-draft: false
+draft: true
 ciudades: ["barcelona"]
 tags: ["optimizar imagenes instagram", "Barcelona Instagram redimensionar", "comprimir fotos redes sociales", "calidad fotos feed instagram"]
 categories: ["Herramientas online", "Guías de ciudad España"]

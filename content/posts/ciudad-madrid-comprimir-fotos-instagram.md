@@ -1,7 +1,7 @@
 ---
 title: "Comprimir fotos para Instagram en Madrid sin perder calidad | Guía 2026"
 date: 2026-06-20T00:20:00+02:00
-draft: false
+draft: true
 ciudades: ["madrid"]
 tags: ["comprimir fotos instagram", "Madrid Instagram optimizar", "reducir peso imagen redes sociales", "tamaño fotos instagram"]
 categories: ["Herramientas online", "Guías de ciudad España"]
