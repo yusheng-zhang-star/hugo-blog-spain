@@ -1,0 +1,98 @@
+# Custom headers for Cloudflare Pages - comprimefotos.com blog
+# https://developers.cloudflare.com/pages/platform/headers/
+#
+# CDN-Cache-Control tells Cloudflare CDN how to cache.
+# Cache Rules (respect_origin) will honor these headers.
+#
+# Strategy:
+#   - Homepage/posts/ciudades/tags: CDN cache 1h, browser revalidate
+#   - Static assets (CSS/JS/images): CDN cache 7d, browser cache 7d
+#   - Sitemap/feed: CDN cache 30min, browser revalidate
+#   - 404 pages: never cache (handled by Negative Cache R0 rule)
+
+# 404 error page: never cache
+/404.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  CDN-Cache-Control: no-store
+
+# Homepage: CDN cache 1h, browser must revalidate
+/
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=3600
+
+# Blog posts: CDN cache 1h, browser must revalidate
+/posts/*
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=3600
+
+# City pages: CDN cache 1h, browser must revalidate
+/ciudades/*
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=3600
+
+# Tags pages: CDN cache 1h, browser must revalidate
+/tags/*
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=3600
+
+# Categories pages: CDN cache 1h, browser must revalidate
+/categories/*
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=3600
+
+# About/Contact pages: CDN cache 1h
+/about/*
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=3600
+/contact/*
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=3600
+/privacy/*
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=3600
+/license/*
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=3600
+
+# Sitemap: CDN cache 30min
+/sitemap.xml
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=1800
+  Content-Type: application/xml; charset=utf-8
+
+# Robots.txt: CDN cache 30min
+/robots.txt
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=1800
+
+# RSS/Atom feeds: CDN cache 30min
+/index.xml
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=1800
+  Content-Type: application/xml; charset=utf-8
+
+# JSON feed: CDN cache 30min
+/index.json
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=1800
+
+# Hugo-generated assets (CSS/JS bundles): CDN cache 7d
+/assets/*
+  Cache-Control: public, max-age=604800
+  CDN-Cache-Control: public, max-age=604800
+
+# Images: CDN cache 30d
+/images/*
+  Cache-Control: public, max-age=2592000
+  CDN-Cache-Control: public, max-age=2592000
+
+# Other XML files: CDN cache 30min
+/*.xml*
+  Cache-Control: public, max-age=0, must-revalidate
+  CDN-Cache-Control: public, max-age=1800
+  Content-Type: application/xml; charset=utf-8
+
+# Catch-all: CDN cache 7d (covers favicon, fonts, etc.)
+/*
+  Cache-Control: public, max-age=604800
+  CDN-Cache-Control: public, max-age=604800
