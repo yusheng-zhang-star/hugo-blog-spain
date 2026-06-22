@@ -26,12 +26,8 @@ buildFuture = true
   # Custom CSS theme extension
   [params.assets]
     disableFingerprinting = false
-    favicon = "/favicon.ico"
-    favicon16x16 = "/favicon-16x16.png"
-    favicon32x32 = "/favicon-32x32.png"
   [params.label]
     text = "ComprimeFotos"
-    icon = "/favicon.ico"
 
 [params.homeInfoParams]
   Title = 'ComprimeFotos Blog — Guías de Compresión de Imágenes'
