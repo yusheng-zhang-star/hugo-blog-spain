@@ -1,46 +1,47 @@
 # Custom headers for Cloudflare Pages - comprimefotos.com blog
 # https://developers.cloudflare.com/pages/platform/headers/
 #
-# CDN-Cache-Control tells Cloudflare CDN how to cache.
-# Cache Rules (respect_origin) will honor these headers.
+# KEY RULE: CF Pages _headers merges ALL matching paths' same-name headers.
+# So / matches BOTH "/" AND "/*" — two CDN-Cache-Control values get merged!
+# Fix: only set CDN-Cache-Control on specific paths, NOT on catch-all.
 #
 # Strategy:
 #   - Homepage/posts/ciudades/tags: CDN cache 1h, browser revalidate
 #   - Static assets (CSS/JS/images): CDN cache 7d, browser cache 7d
 #   - Sitemap/feed: CDN cache 30min, browser revalidate
-#   - 404 pages: never cache (handled by Negative Cache R0 rule)
+#   - 404 pages: no CDN cache (Negative Cache R0 handles 4xx)
 
-# 404 error page: never cache
+# 404 error page: no CDN cache
 /404.html
   Cache-Control: no-cache, no-store, must-revalidate
   CDN-Cache-Control: no-store
 
-# Homepage: CDN cache 1h, browser must revalidate
+# Homepage
 /
   Cache-Control: public, max-age=0, must-revalidate
   CDN-Cache-Control: public, max-age=3600
 
-# Blog posts: CDN cache 1h, browser must revalidate
+# Blog posts
 /posts/*
   Cache-Control: public, max-age=0, must-revalidate
   CDN-Cache-Control: public, max-age=3600
 
-# City pages: CDN cache 1h, browser must revalidate
+# City pages
 /ciudades/*
   Cache-Control: public, max-age=0, must-revalidate
   CDN-Cache-Control: public, max-age=3600
 
-# Tags pages: CDN cache 1h, browser must revalidate
+# Tags pages
 /tags/*
   Cache-Control: public, max-age=0, must-revalidate
   CDN-Cache-Control: public, max-age=3600
 
-# Categories pages: CDN cache 1h, browser must revalidate
+# Categories pages
 /categories/*
   Cache-Control: public, max-age=0, must-revalidate
   CDN-Cache-Control: public, max-age=3600
 
-# About/Contact pages: CDN cache 1h
+# About/Contact/Privacy/License pages
 /about/*
   Cache-Control: public, max-age=0, must-revalidate
   CDN-Cache-Control: public, max-age=3600
@@ -65,13 +66,13 @@
   Cache-Control: public, max-age=0, must-revalidate
   CDN-Cache-Control: public, max-age=1800
 
-# RSS/Atom feeds: CDN cache 30min
+# RSS/Atom feed: CDN cache 30min
 /index.xml
   Cache-Control: public, max-age=0, must-revalidate
   CDN-Cache-Control: public, max-age=1800
   Content-Type: application/xml; charset=utf-8
 
-# JSON feed: CDN cache 30min
+# JSON search index: CDN cache 30min
 /index.json
   Cache-Control: public, max-age=0, must-revalidate
   CDN-Cache-Control: public, max-age=1800
@@ -92,7 +93,6 @@
   CDN-Cache-Control: public, max-age=1800
   Content-Type: application/xml; charset=utf-8
 
-# Catch-all: CDN cache 7d (covers favicon, fonts, etc.)
+# Catch-all: browser cache 7d ONLY (no CDN-Cache-Control to avoid header merge)
 /*
   Cache-Control: public, max-age=604800
-  CDN-Cache-Control: public, max-age=604800
